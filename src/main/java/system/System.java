@@ -21,6 +21,6 @@ public class System extends Function {
 
     @Override
     public String toString() {
-        return "System (X)";
+        return "system(x)";
     }
 }

@@ -22,6 +22,6 @@ public class First extends Function {
 
     @Override
     public String toString(){
-        return "first_function (X)";
+        return "first_function(x)";
     }
 }

@@ -1,4 +1,4 @@
-X,second_function
+X,second_function(x)
 -3.141592653589793,NaN
 -3.041592653589793,NaN
 -2.941592653589793,NaN
