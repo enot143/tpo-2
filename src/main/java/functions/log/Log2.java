@@ -10,7 +10,7 @@ public class Log2 extends Function {
     }
 
     public double calcLog2(double theta, double accuracy) throws FunctionsException {
-        return new LogN(accuracy).calcLogN(theta, accuracy)/new LogN(accuracy).calcLogN(2, accuracy);
+        return new LogN(accuracy).calcLogN(theta, accuracy)/ new LogN(accuracy).calcLogN(2, accuracy);
     }
 
     @Override

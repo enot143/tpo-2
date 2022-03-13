@@ -17,7 +17,7 @@ public class First extends Function {
 
     @Override
     public double calc(double x) throws FunctionsException {
-        return Math.pow((sin.calc(x) / csc.calc(x)), 18);
+        return Math.pow((sin.calcSin(x, accuracy) / csc.calcCsc(x, accuracy)), 18);
     }
 
     @Override

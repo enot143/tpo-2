@@ -20,7 +20,7 @@ public class LogN extends Function {
         double multiplier = (x - 1)/(x + 1);
         double step = multiplier * 2;
         int i = 1;
-        while (Math.abs(step) > accuracy) {
+        while (Math.abs(step) * 2 >= accuracy) {
             step = 2 / (float) (i) * Math.pow(multiplier, i);
             result += step;
             if (!Double.isFinite(result) || !Double.isFinite(multiplier)) {

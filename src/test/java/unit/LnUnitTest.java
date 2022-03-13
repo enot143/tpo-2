@@ -30,7 +30,7 @@ public class LnUnitTest {
     }
 
     @DisplayName("Ln: params")
-    @ParameterizedTest(name = "{index}: {0} degrees")
+    @ParameterizedTest(name = "{index}: {0}")
     @ValueSource(doubles = {3.02, 17.043, 3.324, 12.2, 1.23, 10.21313})
     void test3(double value) throws FunctionsException {
         assertEquals(Math.log(value), logarithmN.calcLogN(value, accuracy), accuracy);
