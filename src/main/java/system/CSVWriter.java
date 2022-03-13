@@ -1,6 +1,7 @@
-package functions;
+package system;
 
 import exceptions.FunctionsException;
+import functions.Function;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class CSVWriter {
 
         Map<String, String> map = new LinkedHashMap<>();
 
-        map.put("X", "Результат модуля (X)");
+        map.put("X", func.toString());
 
         for (double i = start; i <= finish; i += step) {
             try {
@@ -32,7 +33,7 @@ public class CSVWriter {
 
         Map<String, String> map = calculate(func, start, finish, step);
 
-        try (Writer writer = new FileWriter("results/" + func.toString() + ".csv")) {
+        try (Writer writer = new FileWriter("results/" + func + ".csv")) {
             for (Map.Entry<String, String> entry : map.entrySet()) {
                 writer.append(entry.getKey())
                         .append(',')
@@ -40,7 +41,7 @@ public class CSVWriter {
                         .append('\n');
             }
         } catch (IOException ex) {
-            ex.printStackTrace(System.err);
+            ex.printStackTrace(java.lang.System.err);
         }
     }
 

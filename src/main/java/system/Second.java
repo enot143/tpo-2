@@ -31,6 +31,6 @@ public class Second extends Function {
 
     @Override
     public String toString() {
-        return "";
+        return "second_function (X)";
     }
 }

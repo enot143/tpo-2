@@ -20,7 +20,7 @@ public class System extends Function {
     }
 
     @Override
-    public String toString(){
-        return "((((sin(x) / csc(x)) ^ 3) ^ 3) ^ 2)_if_x<=0_ (((((log_3(x) ^ 2) + log_5(x)) / log_3(x)) * log_2(x)) / (log_2(x) * ((ln(x) - (log_5(x) - log_2(x))) + (log_3(x) * log_3(x)))))_if_x>0";
+    public String toString() {
+        return "System (X)";
     }
 }
