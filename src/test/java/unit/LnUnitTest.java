@@ -35,4 +35,11 @@ public class LnUnitTest {
     void test3(double value) throws FunctionsException {
         assertEquals(Math.log(value), logarithmN.calcLogN(value, accuracy), accuracy);
     }
+
+    @DisplayName("Ln: exceptions")
+    @ParameterizedTest(name = "{index}: {0}")
+    @ValueSource(doubles = {-1.456, -3.590403, 0.0})
+    void test4(double value) throws FunctionsException {
+        assertThrows(FunctionsException.class, () -> logarithmN.calcLogN(value, accuracy));
+    }
 }
