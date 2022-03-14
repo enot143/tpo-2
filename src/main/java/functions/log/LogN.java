@@ -24,7 +24,6 @@ public class LogN extends Function {
         while (Math.abs(step) > accuracy || Math.abs(sum)  > accuracy) {
 
             step = ((double) 2 / (double) (i)) * Math.pow(multiplier, i);
-            System.out.println("step:" + step + " , degree:" + i + " , multiplier:" + multiplier);
             result += step;
             if (!Double.isFinite(result) || !Double.isFinite(multiplier)) {
                 throw new FunctionsException("Can't reach the accuracy");
@@ -34,9 +33,7 @@ public class LogN extends Function {
                 throw new FunctionsException("Can't reach the accuracy");
             }
             sum = Math.pow(multiplier, i) * (2.0 / i) * (1 / (1 - multiplier * multiplier));
-            System.out.println(sum);
         }
-        System.out.println("");
         return result;
     }
 

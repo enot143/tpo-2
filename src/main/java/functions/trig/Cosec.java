@@ -11,7 +11,6 @@ public class Cosec extends Function {
     public double calcCsc(double x, double accuracy) throws FunctionsException {
         double sin = new Sinus(accuracy).calcSin(x, accuracy);
         if (Math.abs(sin) <= accuracy) throw new FunctionsException("Division by 0");
-        System.out.println("here");
         return 1/sin;
     }
 
