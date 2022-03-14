@@ -41,7 +41,7 @@ public class FirstFunIntegrationTest {
 
     @DisplayName("first function exceptions")
     @ParameterizedTest(name = "{index}: x = {0}")
-    @ValueSource(doubles = {0.0, -PI, PI, -5 * PI, 3 * PI})
+    @ValueSource(doubles = {0.0, -PI / 2, PI, -5 * PI, 3 * PI})
     void test2(Double actual) throws FunctionsException {
         Mockito.when(sin.calcSin(actual, accuracy)).thenReturn(Math.sin(actual));
         Mockito.when(csc.calcCsc(actual, accuracy)).thenThrow(FunctionsException.class);

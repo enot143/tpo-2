@@ -50,7 +50,7 @@ public class SecondFunIntegrationTest {
 
     @DisplayName("Second function exceptions")
     @ParameterizedTest(name = "{index}: x = {0}")
-    @ValueSource(doubles = {0.1109929395223415, 1.0})
+    @ValueSource(doubles = {0.0, 0.1109929395223415, 1.0})
     void test1(double actual) {
         Assertions.assertThrows(FunctionsException.class, () -> secondF.calc(actual));
     }
